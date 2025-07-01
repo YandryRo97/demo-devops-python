@@ -16,4 +16,4 @@ spec:
         - name: demo-python
           image: yada05/demo-devops-python
           ports:
-            - containerPort: 8005
+            - containerPort: 8000
