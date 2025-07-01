@@ -9,7 +9,7 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
 
     def list(self, request):
-        serializer = self.get_serializer(self.get_queryset(), many = True)
+        serializer = self.get_serializer(self.get_queryset(), many=True)
         return Response(serializer.data)
 
     def retrieve(self, request, pk):
@@ -27,4 +27,3 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer.save()
 
         return Response(serializer.data, status=201)
-    
