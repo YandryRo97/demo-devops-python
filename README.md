@@ -270,7 +270,7 @@ spec:
 ├── requirements.txt
 ├── README.md
 └── docs/
-    └── k8s_architecture.png
+    └── architecture.png
 ```
 
 ---
