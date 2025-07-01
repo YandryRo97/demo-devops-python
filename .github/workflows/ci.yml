@@ -22,15 +22,19 @@ jobs:
       - name: Instalar dependencias
         run: |
           pip install -r requirements.txt
-          pip install pytest flake8 coverage
+          pip install pytest flake8 coverage pytest-django
 
       - name: Lint con flake8
         run: flake8 .
 
       - name: Ejecutar pruebas con pytest
+        env:
+          DJANGO_SETTINGS_MODULE: demo.settings
         run: pytest
 
       - name: Ver cobertura
+        env:
+          DJANGO_SETTINGS_MODULE: demo.settings
         run: |
           coverage run -m pytest
           coverage report
